@@ -16,6 +16,7 @@ import {
 } from '@/components/ui/sidebar';
 import { resolveUrl } from '@/lib/utils';
 import { dashboard } from '@/routes';
+import assessment from '@/routes/assessment';
 import { type NavItem } from '@/types';
 import { RouteDefinition } from '@/wayfinder';
 import { Link, usePage } from '@inertiajs/react';
@@ -54,6 +55,40 @@ const navMain: MainNav[] = [
                 title: 'Dashboard',
                 url: dashboard(),
                 icon: LayoutGrid,
+            },
+        ],
+    },
+    {
+        title: 'Assessments',
+        items: [
+            {
+                title: 'All Assessments',
+                url: assessment.index(),
+            },
+            {
+                title: 'Create New',
+                url: assessment.create(),
+            },
+            {
+                title: 'Assessment Templates',
+                url: '#',
+            },
+        ],
+    },
+    {
+        title: 'Examinees',
+        items: [
+            {
+                title: 'Manage Examinees',
+                url: '#',
+            },
+            {
+                title: 'Pending Invitations',
+                url: '#',
+            },
+            {
+                title: 'Import Examinees',
+                url: '#',
             },
         ],
     },
